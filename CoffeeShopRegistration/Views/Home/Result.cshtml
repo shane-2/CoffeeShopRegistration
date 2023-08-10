@@ -8,7 +8,24 @@
 
 Welcome! @Model.FirstName / @Model.UserName
 
+
+
 </h1>
+
+    @{
+        if (Model.Caffeine)
+        {
+            <h2>Enjoy your free Regular @Model.FavoriteFlavor
+            </h2>
+        }
+        else
+        {
+            <h2>Enjoy your Free Decaf @Model.FavoriteFlavor
+            </h2>
+            <p>@Model.Requirements</p>
+        }
+    }
+@*<h2>Enjoy your @Model.Caffeine?"Regular":"Decaf" @Model.FavoriteFlavor</h2>*@
 </body>
 @{
 

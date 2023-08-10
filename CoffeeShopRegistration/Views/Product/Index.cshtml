@@ -1,0 +1,24 @@
+﻿@model List<Item>
+
+
+
+<body style="background-image: url('https://s3.us-west-1.wasabisys.com/ft-backgrounds/mreflow-Matt_Wolfe_dreamlike_undersea_world_corral_reef_colorful_rgb____ef12fa97-16cd-4b7d-80a4-bb1ba64abcb5.jpeg'); background-size:cover">
+    <div class="text-center; border border-primary">
+
+@{
+    foreach(Item c in Model)
+    {
+        <a class="nav-link text-dark p-0" asp-action="DetailC" asp-route-id="@c.Id">
+                    <h1 style="color: white" class="text-center; border border-secondary-subtle">   @c.Id. @c.ItemName --- @c.Price</h1>
+            </a>
+            <p> </p>
+    }
+  }
+
+
+
+    </div>
+@*//<a href= "@Url.Action("@.cDetailC")"*@
+
+
+</body>

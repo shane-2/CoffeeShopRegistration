@@ -8,5 +8,8 @@
         public string Email { get; set; }
         public string Password { get; set; }
 
+        public string FavoriteFlavor { get; set;}
+        public bool Caffeine { get; set;}
+        public string Requirements { get; set; }
     }
 }

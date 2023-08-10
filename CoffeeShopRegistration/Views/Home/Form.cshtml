@@ -6,25 +6,42 @@
 <body style="background-image: url('https://s3.us-west-1.wasabisys.com/ft-backgrounds/mreflow-Matt_Wolfe_colorful_soundwaves_1f318335-dbb5-44f4-8b01-196119bcf342.jpeg'); background-size:cover">
 <form asp method="post" asp-action="Result">
     <p style="color: white">Please enter your username.</p>
-    <input type="text" name="UserName" />
+    <input type="text" name="UserName" required/>
 
     <p style="color: white">Please enter your first name.</p>
-    <input type="text" name="FirstName" />
+    <input type="text" name="FirstName" required/>
 
     <p style="color: white">Please enter your last name.</p>
-    <input type="text" name="LastName" />
+    <input type="text" name="LastName" required/>
 
     <p style="color: white">Please enter your email.</p>
-    <input type="text" name="Email" />
+    <input type="text" name="Email" required />
     
 
-    <p style="color: white">Please enter a password.Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters.</p>
-    <input type="password" name="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" />
+    <p style="color: white">Please enter a password.Must contain at least one number and one uppercase and lowercase letter, and at least 5 or more characters.</p>
+    <input type="password" name="Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}" />
+
+        <p style="color: white">Please choose your favorite flavor</p>
+    <select name ="FavoriteFlavor">
+        <option value ="Regular Dark">Regular Dark</option>
+        <option value="Hazelnut">Hazelnut</option>
+
+
+    </select>
+    <br />
+    <br />
+        <p style="color: white">How do you like your coffee?</p>
+        <p style="color: white">Regular</p>
+    <input type="radio" name="Caffeine" required value="true"/>
+        <p style="color: white">Decaf</p>
+        <input type="radio" name="Caffeine" required value="false" />
+
+        <p style="color: white">Any special requirements?</p>
+        <textarea name="Requirements" rows="4" cols="50">
+
+        </textarea>
 
     <input type ="submit" />
-
-
-
 
 </form>
 </body>
